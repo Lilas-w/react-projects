@@ -7,3 +7,5 @@
 [03-reviews](https://lilas-w.github.io/react-projects/03-reviews/setup/build/index.html)
 
 [04-accordion](https://lilas-w.github.io/react-projects/04-accordion/setup/build/index.html)
+
+[05-menu](https://lilas-w.github.io/react-projects/05-menu/setup/build/index.html)
