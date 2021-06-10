@@ -9,3 +9,5 @@
 [04-accordion](https://lilas-w.github.io/react-projects/04-accordion/setup/build/index.html)
 
 [05-menu](https://lilas-w.github.io/react-projects/05-menu/setup/build/index.html)
+
+[06-tabs](https://lilas-w.github.io/react-projects/06-tabs/setup/build/index.html)
