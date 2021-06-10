@@ -13,3 +13,5 @@
 [06-tabs](https://lilas-w.github.io/react-projects/06-tabs/setup/build/index.html)
 
 [07-slider](https://lilas-w.github.io/react-projects/07-slider/setup/build/index.html)
+
+[08-lorem-ipsum](https://lilas-w.github.io/react-projects/08-lorem-ipsum/setup/build/index.html)
