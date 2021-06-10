@@ -11,3 +11,5 @@
 [05-menu](https://lilas-w.github.io/react-projects/05-menu/setup/build/index.html)
 
 [06-tabs](https://lilas-w.github.io/react-projects/06-tabs/setup/build/index.html)
+
+[07-slider](https://lilas-w.github.io/react-projects/07-slider/setup/build/index.html)
