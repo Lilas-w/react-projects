@@ -21,3 +21,8 @@
 [10-grocery-bud](https://lilas-w.github.io/react-projects/10-grocery-bud/setup/build/index.html)
 
 [11-navbar](https://lilas-w.github.io/react-projects/11-navbar/setup/build/index.html)
+
+## 配置方法
+- 在package.json中添加"homepage": "./",将"build": "CI = react-scripts build"的CI=删去
+- npm run build
+- 删去gitignore中的/build
