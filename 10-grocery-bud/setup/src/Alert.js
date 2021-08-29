@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 
 const Alert = ({ type, msg, removeAlert, list }) => {
-  //
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       //removeAlert = 默认参数的showAlert(默认show = false)
