@@ -15,3 +15,7 @@
 [07-slider](https://lilas-w.github.io/react-projects/07-slider/setup/build/index.html)
 
 [08-lorem-ipsum](https://lilas-w.github.io/react-projects/08-lorem-ipsum/setup/build/index.html)
+
+[09-color-generator](https://lilas-w.github.io/react-projects/09-color-generator/setup/build/index.html)
+
+[10-grocery-bud](https://lilas-w.github.io/react-projects/10-grocery-bud/setup/build/index.html)
