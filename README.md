@@ -26,6 +26,8 @@
 
 [13-stripe-submenus](https://lilas-w.github.io/react-projects/13-stripe-submenus/setup/build/index.html)
 
+[14-cart](https://lilas-w.github.io/react-projects/14-cart/setup/build/index.html)
+
 ### 配置方法
 - 在package.json中添加"homepage": "./",将"build": "CI = react-scripts build"的CI=删去
 - npm run build
