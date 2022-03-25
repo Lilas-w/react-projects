@@ -29,7 +29,6 @@ function App() {
     e.preventDefault();
     if (!name) {
       //值为空的时候，页面弹出警示信息
-      //因为需要多次使用setAlert，所以定义showAlert函数以使用setAlert
       showAlert(true, 'danger', 'please enter value');
     } else if (name && isEditing) {
       //值不为空且正在编辑
@@ -48,10 +47,9 @@ function App() {
       //显示修改的信息
       showAlert(true, 'success', 'value changed');
     } else {
-      //等待新添加的值不为空，将值加入List中
       //显示成功信息
       showAlert(true, 'success', 'item added to the list');
-      //因为前面的条件判断，此时值一定有内容，创建newItem，加入list中；因为有list,所以需要id
+      //创建newItem，加入list中；因为有list,所以需要id
       const newItem = { id: new Date().getTime().toString(), title: name };
       setList([...list, newItem]);
       //最后将name恢复为空字符串
@@ -59,10 +57,11 @@ function App() {
     }
   }
 
-  //创建一个showAlert函数以改变Alert的值
+  //改变Alert的值
   const showAlert = (show = false, type = '', msg = '') => {
     setAlert({ show, type, msg })
   }
+
   //创建一个clearList函数以清除全部值
   const clearList = () => {
     //显示清除list的信息
@@ -72,7 +71,7 @@ function App() {
   }
 
   //在List组件中使用
-  //创建一个removeItem函数以删除单个item
+  //删除单个item
   const removeItem = (id) => {
     showAlert(true, 'danger', 'item removed');
     //当item的id和选择的id匹配，则让其不再存在于list中
@@ -88,9 +87,8 @@ function App() {
     setName(specificItem.title);
   }
 
-  //只读的window.localStorage 属性允许你访问一个Document 源（origin）的对象 Storage
   useEffect(() => {
-    //每次list改变，存储新值；但只写这个，每次刷新页面时[]重新为空
+    //每次list改变，存储新值；每次刷新页面时[]重新为空
     localStorage.setItem('list', JSON.stringify(list), [list])
   })
 
@@ -104,7 +102,7 @@ function App() {
           <input
             type='text'
             className='grocery'
-            placeholder='e.g. eggs'    //placeholder不起作用？
+            placeholder='e.g. eggs'
             value={name}
             onChange={(e) => setName(e.target.value)} />
           {/* 如果是在编辑，按钮文字显示未edit，否则显示submit */}
