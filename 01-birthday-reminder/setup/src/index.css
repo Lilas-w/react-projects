@@ -4,8 +4,9 @@ Variables
 ===============
 */
 
-:root {
+:root { /*匹配文档根元素的伪类，如用于声明全局变量*/
   /* dark shades of primary color*/
+  /* CSS变量声明是字母前加两个横线（--），$被Sass占用，@被Less占用 */
   --clr-primary-1: hsl(162, 61%, 89%);
   --clr-primary-2: hsl(162, 60%, 78%);
   --clr-primary-3: hsl(162, 61%, 67%);
@@ -35,7 +36,7 @@ Variables
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
   --transition: all 0.3s linear;
-  --spacing: 0.1rem;
+  --spacing: 0.1rem; /*相对于根元素的字体大小的单位，1rem等于html元素的字体大小,一般16px*/
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
@@ -51,16 +52,16 @@ Global Styles
 
 *,
 ::after,
-::before {
+::before { /*伪类，向元素内容前面和后面插入内容，在实际HTML中没有增加标签 */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /*padding和border算在content里，不会影响盒子宽高*/
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: DarkSeaGreen;
-  color: black;
+  background: var(--clr-pink);
+  color: var(--clr-grey-9);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -68,14 +69,14 @@ ul {
   list-style-type: none;
 }
 a {
-  text-decoration: none;
+  text-decoration: none; /*清除<a>的默认文本修饰*/
 }
 h1,
 h2,
 h3,
 h4 {
   letter-spacing: var(--spacing);
-  text-transform: capitalize;
+  text-transform: capitalize; /*控制文本的大小写*/
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
@@ -122,7 +123,7 @@ p {
 
 /* section */
 .section {
-  width: 90vw;
+  width: 90vw; /*相对于视口（浏览器窗口的尺寸）宽度的 1%*/
   margin: 0 auto;
   max-width: var(--max-width);
 }
@@ -134,7 +135,7 @@ p {
 }
 
 main {
-  min-height: 100vh;
+  min-height: 100vh; /*设置元素的最小高度。vh:视窗高度的百分比*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +157,7 @@ main {
 }
 .person {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr; /*规定网格布局中的列数（和宽度）*/
   column-gap: 0.75rem;
   margin-bottom: 1.5rem;
   align-items: center;
@@ -164,7 +165,7 @@ main {
 .person img {
   width: 75px;
   height: 75px;
-  object-fit: cover;
+  object-fit: cover; /*调整 <img> 或 <video> 的大小以适合其容器*/
   border-radius: 50%;
   box-shadow: var(--light-shadow);
 }
@@ -179,13 +180,13 @@ main {
   display: block;
   width: 100%;
   border-color: transparent;
-  background: DarkSeaGreen;
+  background: var(--clr-pink);
   margin: 2rem auto 0 auto;
   text-transform: capitalize;
   font-size: 1.2rem;
   padding: 0.5rem 0;
   letter-spacing: var(--spacing);
   border-radius: var(--radius);
-  outline: 1px solid rgba(245, 218, 228, 0.8);
+  outline: 1px solid rgba(242, 138, 178, 0.8); /*轮廓线不会占据空间，也不一定是矩形*/
   cursor: pointer;
 }
