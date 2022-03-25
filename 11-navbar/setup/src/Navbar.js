@@ -12,10 +12,9 @@ const Navbar = () => {
   //for the links
   const linksRef = useRef(null);
 
-  //每当showLinks改变，调用useEffect
+  //showLinks改变时，让links列表的父盒子高度 = 0 or 所有列表的高度和
   useEffect(() => {
     //linksRef.current节点
-    //使用JS中的getBoundingClientRect()返回元素的大小及其相对于视口的位置，该API返回的 DOMRect对象在现代浏览器中可以被修改
     //使用linksRef而非linksContainerRef，因为links-container初始值为0，toggle后也为0
     const linksHeight = linksRef.current.getBoundingClientRect().height;
     if (showLinks) {
@@ -37,11 +36,7 @@ const Navbar = () => {
             <FaBars />
           </button>
         </div>
-        {/* 之前用className={`${showLinks?'links-container show-container':'links-container'}`} 实现显示和隐藏导航栏内容*/}
-        {/* 问题在于show-container中height: 10rem;是给定的，若导航栏内容增多，height不够，则无法显示在页面中 */}
-        {/* 增加ref属性，指向linksContainerRef */}
         <div className="links-container" ref={linksContainerRef}>
-          {/* 增加ref属性，指向linksRef */}
           <ul className="links" ref={linksRef}>
             {/* 将数据分离，而非hardcode，方便增删修改。 遍历links*/}
             {links.map((link) => {
