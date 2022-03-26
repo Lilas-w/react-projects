@@ -7,7 +7,6 @@ import { AppProvider } from './context'
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* 9 使用<AppProvider>包裹<App /> */}
     <AppProvider>
       <App />
     </AppProvider>

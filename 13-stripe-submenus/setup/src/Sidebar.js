@@ -2,15 +2,18 @@ import React from 'react'
 import { FaTimes } from 'react-icons/fa'
 import sublinks from './data'
 import { useGlobalContext } from './context'
-//小屏幕时点击右上角，出现的导航栏及其子菜单模块
+//小屏幕时点击右上角，弹窗导航和子菜单
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
+
   return (
     <aside className={`${isSidebarOpen ? 'sidebar-wrapper show' : 'sidebar-wrapper'}`}>
       <div className="sidebar">
+
         <button className="close-btn" onClick={closeSidebar}>
           <FaTimes />
         </button>
+
         <div className="sidebar-links">
           {sublinks.map((item, index) => {
             const { links, page } = item;
@@ -27,6 +30,7 @@ const Sidebar = () => {
             </article>
           })}
         </div>
+
       </div>
     </aside>
   )
