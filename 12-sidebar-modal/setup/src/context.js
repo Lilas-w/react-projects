@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react'
 
-
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
@@ -29,7 +28,7 @@ const AppProvider = ({ children }) => {
     }}>{children}</AppContext.Provider>
 }
 
-//第一种方法，在组件中使用AppContext函数获取数据
+
 
 //custom hook
 //第二种方法，使用useGlobalContext导出
