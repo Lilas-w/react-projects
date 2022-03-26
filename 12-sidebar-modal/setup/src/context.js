@@ -28,8 +28,6 @@ const AppProvider = ({ children }) => {
     }}>{children}</AppContext.Provider>
 }
 
-
-
 //custom hook
 //第二种方法，使用useGlobalContext导出
 export const useGlobalContext = () => {
