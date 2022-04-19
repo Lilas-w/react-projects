@@ -7,7 +7,6 @@ import CartContainer from './CartContainer'
 // items
 
 function App() {
-  //6 获取context.js中state的loading
   const { loading } = useGlobalContext();
 
   if (loading) {

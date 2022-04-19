@@ -3,7 +3,6 @@ import CartItem from './CartItem'
 import { useGlobalContext } from './context'
 
 const CartContainer = () => {
-  //3 获取context.js中state的cart和total,并写进UI结构
   const { cart, total, clearCart } = useGlobalContext()
   if (cart.length === 0) {
     return (

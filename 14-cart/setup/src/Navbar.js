@@ -1,7 +1,6 @@
 import React from 'react'
 import { useGlobalContext } from './context'
 const Navbar = () => {
-  //4 获取context.js中state的amount
   const { amount } = useGlobalContext();
   return (
     <nav>
