@@ -1,5 +1,5 @@
 ## 需求拆解
-一个鸡尾酒展示页面，有导航栏切换页面、搜索功能、每种鸡尾酒点击查看详情。
+一个鸡尾酒展示页面，导航栏切换页面、搜索功能、每种鸡尾酒点击查看详情。
 1. 导航栏-component/Navbar组件。使用Link组件修改地址栏，借由App.js中的BrowserRouter对应地渲染home、about页面。
 2. 鸡尾酒展示列表-component/CocktailList组件，内含Cocktail、Loading组件
 3. 搜索鸡尾酒名称-component/SearchForm组件
